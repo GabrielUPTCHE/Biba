@@ -36,6 +36,31 @@ window.addEventListener('DOMContentLoaded', async () => {
     window.location.href = '../index.html';
   });
 
+  const getTypeUser = (levelAccess) =>{
+    if (levelAccess == 3) {
+      return "Admin"
+    }
+    if (levelAccess == 2) {
+      return "Empleado"
+    }
+    if (levelAccess == 1) {
+      return "Visitante"
+    }
+    
+  }
+
+  const getTypeDocument = (confidentialLevel) =>{
+    if (confidentialLevel == 3) {
+      return "Secreto"
+    }
+    if (confidentialLevel == 2) {
+      return "Confidencial"
+    }
+    if (confidentialLevel == 1) {
+      return "Público"
+    }
+  }
+
   // Asignar eventos
   document.querySelectorAll('.read-btn').forEach(btn => {
     btn.addEventListener('click', (e) => {
@@ -46,7 +71,7 @@ window.addEventListener('DOMContentLoaded', async () => {
         const encodedPath = encodeURIComponent(file.fileLocation);
         window.location.href = `./read-file.html?path=${encodedPath}&index=${index}&confidentialLevel=${file.confidentialLevel}`;
       }else{
-        showToast('No es posible leer el archivo.');
+        showToast(`Sin Acceso - El rol ${getTypeUser(user.levelAccess)} no tiene acceso a archivos de nivel ${getTypeDocument(file.confidentialLevel)} `);
       }
     });
   });
@@ -60,7 +85,7 @@ window.addEventListener('DOMContentLoaded', async () => {
       if(user.levelAccess >= file.confidentialLevel){
         window.location.href = `./edit-file.html?path=${encodedPath}&index=${index}&confidentialLevel=${file.confidentialLevel}`;
       }else{
-        showToast('No es posible editar el archivo.');
+        showToast(`Sin Acceso - El rol ${getTypeUser(user.levelAccess)} no puede editar archivos de nivel ${getTypeDocument(file.confidentialLevel)}`);
       }
     });
   });
