@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Crear Usuario</title>
+  <link rel="stylesheet" href="../styles/main.css" />
+</head>
+<body>
+  <form id="userForm">
+    <h2>Crear Nuevo Usuario</h2>
+
+    <label for="name">Nombre de usuario:</label>
+    <input type="text" id="name" required />
+
+    <label for="password">Contraseña:</label>
+    <input type="password" id="password" required />
+
+    <label for="levelAccess">Nivel de Acceso:</label>
+    <select id="levelAccess" required>
+      <option value="1">1. Visitante</option>
+      <option value="2">2. Empleado</option>
+      <option value="3">3. Administrador</option>
+    </select>
+
+    <div style="display: flex; gap: 10px; margin-top: 15px;">
+      <button type="button" id="cancelBtn">Cancelar</button>
+      <button type="submit">Crear</button>
+    </div>
+
+    <div id="result"></div>
+  </form>
+
+  <script src="../scripts/create-user.js"></script>
+</body>
+</html>

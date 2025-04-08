@@ -1,0 +1,14 @@
+{
+  "name": "Pollitos S.A (BIBA)",
+  "version": "1.0.0",
+  "description": "Simulación Bell-LaPadula con Electron",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Tu Nombre",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^29.0.0"
+  }
+}

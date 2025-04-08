@@ -1,0 +1,18 @@
+[
+    {
+      "fileName": "top_secret.txt",
+      "confidentialLevel": 3,
+      "fileLocation": "./data/archivos/top_secret.txt"
+    },
+    {
+        "fileName": "confidential.txt",
+        "confidentialLevel": 2,
+        "fileLocation": "./data/archivos/confidential.txt"
+    },
+    {
+        "fileName": "public.txt",
+        "confidentialLevel": 1,
+        "fileLocation": "./data/archivos/public.txt"
+    }
+]
+  

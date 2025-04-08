@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Visualizar Archivo</title>
+  <link rel="stylesheet" href="../styles/main.css" />
+</head>
+<body>
+  <div class="form-container">
+    <h2>Contenido del Archivo</h2>
+    <div id="toast" class="hidden">✅ Archivo editado exitosamente</div>
+    <textarea id="fileContent" disabled="true" rows="20" cols="80" placeholder="Contenido del archivo..."></textarea>
+    <div class="form-buttons">
+      <button id="cancelBtn">Volver</button>
+    </div>
+  </div>
+
+  <script src="../scripts/read-file.js"></script>
+</body>
+</html>

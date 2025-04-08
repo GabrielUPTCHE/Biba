@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Empleado Dashboard</title>
+  <link rel="stylesheet" href="../styles/admin.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Panel de Empleado</h2>
+    <button id="logoutBtn" style="background-color: #ff4b4b; color: white;">Cerrar sesión</button>
+    <button hidden="true" id="createUserBtn">Crear nuevo usuario</button>
+    <div id="toast" class="hidden">✅ Archivo editado exitosamente</div>
+    
+    <h3>Archivos registrados</h3>
+    <table id="filesTable">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Nivel de Confidencialidad</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+  </div>
+
+  <script src="../scripts/user.js"></script>
+</body>
+</html>
